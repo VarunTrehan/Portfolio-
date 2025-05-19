@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 96%; /* Light grayish blue */
+    --foreground: 220 25% 25%; /* Dark desaturated blue/charcoal */
+
+    --muted: 210 30% 80%;
+    --muted-foreground: 220 15% 45%;
+
+    --popover: 210 40% 98%; /* Slightly lighter than background */
+    --popover-foreground: 220 25% 25%;
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 220 25% 25%; /* Dark desaturated blue/charcoal */
+
+    --border: 210 20% 85%;
+    --input: 210 30% 92%;
+
+    --primary: 220 70% 45%; /* Strong medium-dark blue */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 210 40% 90%; /* Lighter blue for secondary elements */
+    --secondary-foreground: 220 50% 35%; /* Darker blue for text on secondary */
+
+    --accent: 16 100% 60%; /* Vibrant Coral */
+    --accent-foreground: 0 0% 100%; /* White for contrast on coral */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 220 70% 55%; /* Slightly lighter primary for rings */
+    
+    --radius: 0.5rem;
+
+    --chart-1: 220 70% 55%; /* Adjusted chart colors */
+    --chart-2: 16 90% 65%;
+    --chart-3: 210 50% 60%;
+    --chart-4: 190 60% 50%;
+    --chart-5: 30 80% 70%;
+    
+    --sidebar-background: 210 40% 98%; /* Very light blue, almost white */
+    --sidebar-foreground: 220 25% 30%; /* Dark desaturated blue */
+    --sidebar-primary: 220 70% 45%; /* Same as main primary */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 92%; /* Slightly darker than sidebar background for hover */
+    --sidebar-accent-foreground: 220 70% 45%; /* Primary color for text on accent hover */
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 220 70% 55%;
+  }
+
+  .dark {
+    --background: 220 30% 12%; /* Very dark blue */
+    --foreground: 210 30% 88%; /* Light grayish blue */
+
+    --muted: 220 20% 25%;
+    --muted-foreground: 210 25% 70%;
+
+    --popover: 220 30% 15%;
+    --popover-foreground: 210 30% 88%;
+
+    --card: 220 25% 18%; /* Slightly lighter dark blue for cards */
+    --card-foreground: 210 30% 88%; /* Light grayish blue */
+
+    --border: 220 15% 30%;
+    --input: 220 20% 22%;
+
+    --primary: 16 100% 65%; /* Coral becomes primary in dark mode */
+    --primary-foreground: 220 100% 10%; /* Very dark blue/black for text on coral */
+
+    --secondary: 220 30% 20%; /* Darker blue for secondary elements */
+    --secondary-foreground: 210 30% 80%; /* Lighter text on dark secondary */
+
+    --accent: 220 80% 70%; /* A bright, lighter blue for accent in dark mode */
+    --accent-foreground: 220 100% 10%; /* Very dark blue/black */
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 16 100% 70%; /* Lighter coral for rings */
+
+    --chart-1: 16 90% 70%; /* Adjusted chart colors for dark mode */
+    --chart-2: 220 70% 60%;
+    --chart-3: 210 40% 70%;
+    --chart-4: 190 50% 55%;
+    --chart-5: 30 70% 75%;
+
+    --sidebar-background: 220 30% 15%; /* Slightly lighter than main dark background */
+    --sidebar-foreground: 210 30% 85%; /* Light grayish blue */
+    --sidebar-primary: 16 100% 65%; /* Same as main primary dark */
+    --sidebar-primary-foreground: 220 100% 10%;
+    --sidebar-accent: 220 20% 25%; /* Darker muted blue for hover */
+    --sidebar-accent-foreground: 16 100% 70%; /* Light coral for text on accent hover */
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: 16 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Removed font-family: Arial to let Geist from layout.tsx apply */
+  }
+}
